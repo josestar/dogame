@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Simple Game</title>
+  <script src="vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="score">
+      <div class="player">You</div>
+
+      <div class="points-bkg">
+        <div class="points-active"
+             :style="{width: playerPoints + '%'}">
+          <span>{{ playerPoints }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="score">
+      <div class="player">Monster</div>
+
+      <div class="points-bkg">
+        <div class="points-active points-active-monster"
+             :style="{width: monsterPoints + '%'}">
+          <span>{{ monsterPoints }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-space"
+         v-if="gameStarted">
+      <span class="btn btn-attack"
+            @click="attack(false)">Attack [ A ]</span>
+
+      <span class="btn btn-special"
+            @click="specialAttack">Special Attack [ S ]</span>
+
+      <span class="btn btn-heal"
+            @click="heal">Heal [ D ]</span>
+
+      <span class="btn btn-give"
+            @click="resetGame">Give Up [ F ]</span>
+    </div>
+
+    <div class="btn-space" v-else>
+      <div class="btn btn-start"
+           @click="startGame">Start Game [ N ]</div>
+    </div>
+
+    <div class="msg-list">
+      <template v-for="log in gameLog">
+        <div :class="['msg', log.css]">
+          #{{ log.id }}: {{ log.player }} {{ log.action }} <strong>{{ log.hit }} points</strong>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

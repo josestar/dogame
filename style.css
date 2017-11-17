@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  background-color: #2C3E50;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #fff;
+}
+
+#app {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.score {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+  width: 45%;
+  display: inline-block;
+  margin-top: 50px;
+  margin-right: 4%;
+}
+
+.player {
+  background: inherit;
+}
+
+.points-bkg {
+  background-color: #67809F;
+  font-size: 36px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.points-active {
+  background-color: #19B5FE;
+  color: #22313f;
+  font-weight: normal;
+  width: 31%;
+  display: inline-block;
+  text-align: center;
+}
+
+.points-active-monster {
+  background-color: #EC644B;
+}
+
+.points-active span {
+  background: inherit;
+  font-size: 24px;
+}
+
+.btn-space {
+  margin-top: 75px;
+}
+
+.btn {
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: #fff;
+  margin-right: 10px;
+  transition: ease all 0.15s;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 10px;
+  -webkit-box-shadow: 0px 0px 48px 1px rgba(0,0,0,0.62);
+  -moz-box-shadow: 0px 0px 48px 1px rgba(0,0,0,0.62);
+  box-shadow: 0px 0px 48px 1px rgba(0,0,0,0.62);
+}
+
+.btn:active {
+  top: 3px;
+  -webkit-box-shadow: 0px 0px 48px -10px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 48px -10px rgba(0,0,0,1);
+  box-shadow: 0px 0px 48px -10px rgba(0,0,0,1);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-attack:hover {
+  color: #000;
+  background-color: #EC644B;
+  border-color: #EC644B;
+}
+
+.btn-special:hover {
+  color: #000;
+  background-color: #22A7F0;
+  border-color: #22A7F0;
+}
+
+.btn-heal:hover {
+  color: #000;
+  background-color: #2ECC71;
+  border-color: #2ECC71;
+}
+
+.btn-give:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.btn-start:hover {
+  color: #000;
+  background-color: #F5D76E;
+  border-color: #F5D76E;
+}
+
+.msg-list {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.msg {
+  margin-top: 5px;
+  width: 80%;
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+
+.msg-player {
+  background-color: #89C4F4;
+}
+
+.msg-monster {
+  background-color: #F18D7A;
+}
+
+.msg-heal {
+  background-color: #45ED8D;
+}
+
+.msg-player strong,
+.msg-monster strong,
+.msg-heal strong {
+  background: inherit;
+}
